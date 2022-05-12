@@ -1,3 +1,5 @@
+API Link: https://github.com/nathentodd04/Clinic_Manager_API
+
 npm run dev
 
 For Admin access:
