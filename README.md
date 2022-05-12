@@ -1,3 +1,5 @@
+npm run dev
+
 For Admin access:
 Username: admin1
 Password: admin1
