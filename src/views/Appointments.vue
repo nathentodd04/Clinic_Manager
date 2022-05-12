@@ -87,6 +87,17 @@ function updateAppointment(e) {
         alert('Please complete all forms.');
         return;
       }
+    
+    for (let i = 0; i < appointments.value.length; i++) {
+    if (data.date == appointments.value[i].date.split('T')[0] &&
+        data.time == appointments.value[i].time &&
+        data.id != appointments.value[i]._id){
+          console.log("Data id: ", data.id)
+          console.log("i: ", i)
+          alert("This date and time is already reserved for another appointment. Please reschedule.")
+          return
+        }
+  }
 
   fetch(`http://localhost:4000/appointment/update/${data.id}`, {
     method: "PUT",
